@@ -1,0 +1,14 @@
+requests
+fastapi
+pytest 
+azure-storage-blob
+azure-core
+pydantic
+python-dotenv
+uvicorn
+pandas
+aiohttp
+pyarrow
+fastparquet
+tenacity
+httpx

@@ -1,0 +1,11 @@
+pandas
+python-dotenv
+openai
+pytest
+streamlit
+fastapi
+pydantic
+docutils
+markdown
+uvicorn
+pipeline

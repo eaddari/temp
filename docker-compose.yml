@@ -1,0 +1,29 @@
+services:
+
+  input_integration_pipeline:
+    build: ./microservices/input_integration_pipeline
+    ports:
+      - "5001:8081"
+    volumes:
+      - microservices-data:/app/outputs
+    env_file:
+      - /microservices/input_integration_pipeline/.env
+
+  transforming_pipeline:
+    build: ./microservices/transforming_pipeline
+    ports:
+      - "5002:8082"
+    volumes:
+      - microservices-data:/app/outputs
+    env_file:
+      - /microservices/transforming_pipeline/.env
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "8083:8083"
+    volumes:
+      - microservices-data:/app/outputs
+
+volumes:
+  microservices-data:
