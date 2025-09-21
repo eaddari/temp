@@ -7,7 +7,7 @@ services:
     volumes:
       - microservices-data:/app/outputs
     env_file:
-      - /microservices/input_integration_pipeline/.env
+      - ./microservices/input_integration_pipeline/.env
 
   transforming_pipeline:
     build: ./microservices/transforming_pipeline
@@ -16,7 +16,7 @@ services:
     volumes:
       - microservices-data:/app/outputs
     env_file:
-      - /microservices/transforming_pipeline/.env
+      - ./microservices/transforming_pipeline/.env
 
   frontend:
     build: ./frontend
@@ -25,5 +25,81 @@ services:
     volumes:
       - microservices-data:/app/outputs
 
+  neo4j:
+    image: neo4j:5.23-community
+    depends_on:
+      - transforming_pipeline
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+      - neo4j_import:/var/lib/neo4j/import
+      - neo4j_plugins:/plugins
+      - microservices-data:/app/outputs
+    environment:
+      - NEO4J_AUTH=neo4j/docgentest
+      - NEO4J_PLUGINS=["apoc","graph-data-science"]
+      - NEO4J_dbms_security_procedures_unrestricted=gds.*,apoc.*
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    healthcheck:
+      test: ["CMD-SHELL", "cypher-shell -u neo4j -p docgentest 'RETURN 1'"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+
+  graph-builder:
+    build: ./graph
+    depends_on:
+      transforming_pipeline:
+        condition: service_started
+      neo4j:
+        condition: service_healthy
+    environment:
+      - NEO4J_URI=bolt://neo4j:7687
+      - NEO4J_USER=neo4j
+      - NEO4J_PASSWORD=docgentest
+      - PARQUET_FILE_NAME=tiangolo-typer_part_0_processed.parquet
+      - OPENAI_API_TYPE=${OPENAI_API_TYPE}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_API_VERSION=${OPENAI_API_VERSION}
+      - OPENAI_API_BASE=${OPENAI_API_BASE}
+      - AZURE_OPENAI_API_VERSION=${AZURE_OPENAI_API_VERSION}
+      - AZURE_OPENAI_ENDPOINT=${AZURE_OPENAI_ENDPOINT}
+      - AZURE_OPENAI_API_KEY=${AZURE_OPENAI_API_KEY}
+      - AZURE_OPENAI_DEPLOYMENT_NAME=${AZURE_OPENAI_DEPLOYMENT_NAME}
+    ports:
+      - "8084:8082"
+    volumes:
+      - microservices-data:/app/outputs
+      - ./graph/data:/app/data
+
+  ai-coordinator:
+    build: ./microservices/ai_layer
+    depends_on:
+      graph-builder:
+        condition: service_completed_successfully
+    environment:
+      - NEO4J_URI=bolt://neo4j:7687
+      - NEO4J_USER=neo4j
+      - NEO4J_PASSWORD=docgentest
+      - OPENAI_API_TYPE=${OPENAI_API_TYPE}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_API_VERSION=${OPENAI_API_VERSION}
+      - OPENAI_API_BASE=${OPENAI_API_BASE}
+      - AZURE_OPENAI_API_VERSION=${AZURE_OPENAI_API_VERSION}
+      - AZURE_OPENAI_ENDPOINT=${AZURE_OPENAI_ENDPOINT}
+      - AZURE_OPENAI_API_KEY=${AZURE_OPENAI_API_KEY}
+      - AZURE_OPENAI_DEPLOYMENT_NAME=${AZURE_OPENAI_DEPLOYMENT_NAME}
+    ports:
+      - "8085:8085"
+    volumes:
+      - microservices-data:/app/outputs
+      - ./outputs:/app/local_outputs
+
 volumes:
   microservices-data:
+  neo4j_data:
+  neo4j_logs:
+  neo4j_import:
+  neo4j_plugins:

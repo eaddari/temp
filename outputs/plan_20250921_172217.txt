@@ -1,0 +1,73 @@
+{
+    "title": "Project Title (descriptive name for the software)",
+    "description": "A concise summary describing the project's main purpose and core functionality.",
+    "estimated_length": "Medium",
+    "sections": [
+        {
+            "section_name": "General Information",
+            "content_type": "overview",
+            "priority": "High",
+            "description": "Project name, current version (using semantic versioning), and a brief description of the software's purpose and functionality. This section provides a quick introduction for new users and contributors."
+        },
+        {
+            "section_name": "Project Overview",
+            "content_type": "overview",
+            "priority": "High",
+            "description": "A detailed description of the software's goals, main features, and intended use cases. Include the date of creation, project organization details (such as repository structure), and an indication of the project's size and scope."
+        },
+        {
+            "section_name": "Project Structure",
+            "content_type": "reference",
+            "priority": "High",
+            "description": "A high-level overview of the folder and file organization, including the purpose of key files and directories. This section should help users and developers quickly understand where to find important components."
+        },
+        {
+            "section_name": "Installation",
+            "content_type": "tutorial",
+            "priority": "High",
+            "description": "Step-by-step instructions for installing and setting up the software. Include system requirements, a list of required libraries and dependencies, setup steps, and any known installation issues or troubleshooting tips."
+        },
+        {
+            "section_name": "Usage",
+            "content_type": "examples",
+            "priority": "High",
+            "description": "Instructions for running or using the software, including example commands, code snippets, and expected outputs. Add screenshots or sample outputs where appropriate, as well as testing instructions and known limitations."
+        },
+        {
+            "section_name": "Architecture Overview",
+            "content_type": "reference",
+            "priority": "Medium",
+            "description": "A summary of the main classes, functions, and their relationships. Include a high-level data flow diagram or description, and highlight central components and how they interact."
+        },
+        {
+            "section_name": "Contributing",
+            "content_type": "reference",
+            "priority": "Medium",
+            "description": "Guidelines for contributing to the project, including coding standards, how to submit issues or pull requests, and references to any existing contributor documentation."
+        },
+        {
+            "section_name": "License",
+            "content_type": "reference",
+            "priority": "Medium",
+            "description": "Information about the software license, any restrictions on use, and the preferred citation format for academic or other publications."
+        },
+        {
+            "section_name": "Contact Information",
+            "content_type": "reference",
+            "priority": "Low",
+            "description": "Contact details for maintainers and contributors, including names, roles, ORCID IDs, institutions, and email addresses."
+        },
+        {
+            "section_name": "Acknowledgements",
+            "content_type": "reference",
+            "priority": "Low",
+            "description": "Recognition of funding sources (with grant numbers), related publications, locations where the project is available, relationships to other projects, and a complete list of contributors."
+        },
+        {
+            "section_name": "Further Documentation",
+            "content_type": "reference",
+            "priority": "Low",
+            "description": "Links to API documentation, detailed manuals, configuration files, and other resources for advanced users or developers."
+        }
+    ]
+}

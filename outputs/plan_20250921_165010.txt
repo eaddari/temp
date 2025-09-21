@@ -1,0 +1,129 @@
+{
+    "title": "Project Title (descriptive name for the software)",
+    "description": "A concise summary describing the software's main purpose and core functionality.",
+    "estimated_length": "Medium",
+    "document_info": {
+        "document_type": "README",
+        "intended_audience": ["Developers", "Contributors", "Architects", "Advanced End-users"],
+        "purpose": "Provide a comprehensive overview, installation and usage instructions, and contribution guidelines for the project."
+    },
+    "sections": [
+        {
+            "section_name": "General Information",
+            "content_type": "overview",
+            "priority": "High",
+            "description": "Project name, current version (using semantic versioning), and a brief description of the software's purpose and main functionality.",
+            "queries": [
+                "What is the official name of the project?",
+                "What is the current version (semantic versioning)?",
+                "Provide a one-sentence summary of the project's main purpose."
+            ]
+        },
+        {
+            "section_name": "Project Overview",
+            "content_type": "overview",
+            "priority": "High",
+            "description": "A detailed description of what the software does, its main features and goals, date of creation, project organization details (e.g., repository structure, main maintainers), and an indication of the project's size or scope.",
+            "queries": [
+                "What are the main features and goals of the project?",
+                "When was the project created?",
+                "Who are the main maintainers?",
+                "How is the project organized (high-level structure)?",
+                "What is the approximate size or scope of the codebase?"
+            ]
+        },
+        {
+            "section_name": "Installation",
+            "content_type": "tutorial",
+            "priority": "High",
+            "description": "Comprehensive, step-by-step installation instructions, including system requirements, a list of required libraries and dependencies, setup steps, and any known installation issues or troubleshooting tips.",
+            "queries": [
+                "What are the system requirements (OS, hardware, etc.)?",
+                "List all required libraries and dependencies (with versions).",
+                "What are the step-by-step installation instructions?",
+                "Are there any known installation issues or troubleshooting tips?"
+            ]
+        },
+        {
+            "section_name": "Usage",
+            "content_type": "examples",
+            "priority": "High",
+            "description": "Clear instructions for running or using the software, including example commands or code snippets, expected outputs, screenshots if applicable, testing instructions, and any known limitations or caveats.",
+            "queries": [
+                "How do you run or use the software (entry points, commands, scripts)?",
+                "Provide example commands or code snippets for typical usage.",
+                "What are the expected outputs?",
+                "Are there any screenshots or visual aids?",
+                "How can users test their installation?",
+                "Are there any known limitations or caveats?"
+            ]
+        },
+        {
+            "section_name": "Project Structure",
+            "content_type": "reference",
+            "priority": "High",
+            "description": "Overview of the project's folder and file organization, descriptions of key files, classes, and functions, and an explanation of how the main components relate to each other.",
+            "queries": [
+                "What is the folder and file hierarchy of the project?",
+                "Describe the purpose of key files and directories.",
+                "List and briefly describe key classes and functions.",
+                "How do the main components interact or relate to each other?"
+            ]
+        },
+        {
+            "section_name": "Dependencies",
+            "content_type": "reference",
+            "priority": "Medium",
+            "description": "List of external libraries and dependencies required by the project, including version numbers and installation sources.",
+            "queries": [
+                "List all external libraries and dependencies (with versions).",
+                "Where can these dependencies be installed from (e.g., PyPI, npm, system packages)?"
+            ]
+        },
+        {
+            "section_name": "Contributing",
+            "content_type": "reference",
+            "priority": "Medium",
+            "description": "Guidelines for contributing to the project, including how to submit issues and pull requests, coding standards, and links to any contributor documentation.",
+            "queries": [
+                "What are the steps for submitting issues or pull requests?",
+                "Are there any coding standards or style guides?",
+                "Where can contributors find additional documentation or guidelines?"
+            ]
+        },
+        {
+            "section_name": "License",
+            "content_type": "reference",
+            "priority": "Medium",
+            "description": "Information about the software license, any restrictions on use, and the preferred citation format for academic or professional publications.",
+            "queries": [
+                "What is the software license?",
+                "Are there any restrictions on use?",
+                "What is the preferred citation format (if applicable)?"
+            ]
+        },
+        {
+            "section_name": "Contact Information",
+            "content_type": "reference",
+            "priority": "Low",
+            "description": "Contact details for maintainers and contributors, including names, roles, ORCID IDs, institutions, and email addresses.",
+            "queries": [
+                "Who are the maintainers and contributors?",
+                "Provide names, roles, ORCID IDs, institutions, and email addresses."
+            ]
+        },
+        {
+            "section_name": "Acknowledgements",
+            "content_type": "reference",
+            "priority": "Low",
+            "description": "Recognition of funding sources (with grant numbers), related publications, locations where the project is available, relationships to other projects, and a complete list of contributors.",
+            "queries": [
+                "List funding sources and grant numbers.",
+                "List related publications.",
+                "Where is the project available (repositories, websites)?",
+                "What other projects is this related to?",
+                "Provide a complete list of contributors."
+            ]
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+  "evaluation_timestamp": "2025-09-21T17:12:26.018169",
+  "document_A": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\generated\\data-reader.md",
+  "document_B": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\reference\\datareader-official.md",
+  "individual_results": [
+    {
+      "better_document": "A",
+      "confidence": 0.9,
+      "reasoning": "Document A provides a more comprehensive and detailed overview of the repository, including its structure, key features, and technical details. It is better organized and offers clearer guidance for users and contributors. Document B, while useful, lacks the depth and organization of Document A.",
+      "scores": {
+        "document_A": 9.0,
+        "document_B": 6.5
+      },
+      "model": "deepseek",
+      "model_full_name": "DeepSeek-V3-0324"
+    },
+    {
+      "better_document": "A",
+      "confidence": 0.85,
+      "reasoning": "Document A provides a more comprehensive overview of the repository, including a detailed explanation of the repository structure, key features, and an example of usage. It also includes specific sections on documentation and testing. Document B focuses more on installation and basic usage without delving into the underlying structure or advanced features.",
+      "scores": {
+        "document_A": 9.0,
+        "document_B": 6.5
+      },
+      "model": "phi4",
+      "model_full_name": "phi-4"
+    },
+    {
+      "better_document": "A",
+      "confidence": 0.85,
+      "reasoning": "Document A provides more detailed content with a clear repository structure, comprehensive feature descriptions, and practical examples, making it more useful and well-organized for readers. Document B, while concise, lacks depth in coverage and detailed explanations.",
+      "scores": {
+        "document_A": 8.7,
+        "document_B": 6.5
+      },
+      "model": "grok3",
+      "model_full_name": "grok-3"
+    }
+  ],
+  "summary": {
+    "winner_by_average_score": "A",
+    "winner_by_votes": "A",
+    "votes": {
+      "A": 3,
+      "B": 0
+    },
+    "average_scores": {
+      "document_A": 8.9,
+      "document_B": 6.5
+    },
+    "average_confidence": 0.87,
+    "score_difference": 2.4
+  }
+}

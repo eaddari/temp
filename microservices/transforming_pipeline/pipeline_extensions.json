@@ -1,5 +1,6 @@
 {
   "file_converter": [".md", ".rst"],
   "python_to_text": [".py", ".ipynb"],
-  "text_cleaner": [".txt"]
+  "text_cleaner": [".txt"],
+  "include_yamls": [".yaml", ".yml"]
 }

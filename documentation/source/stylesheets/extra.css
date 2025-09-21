@@ -1,0 +1,153 @@
+/* Custom styles for AIDocGen documentation */
+
+:root {
+  --md-primary-fg-color: #2563eb;
+  --md-primary-fg-color--light: #3b82f6;
+  --md-primary-fg-color--dark: #1d4ed8;
+  --md-accent-fg-color: #6366f1;
+}
+
+/* Custom styling for code blocks */
+.highlight pre {
+  border-radius: 8px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Improve table styling */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-default-fg-color--lightest);
+  font-weight: 600;
+}
+
+/* Better spacing for navigation sections */
+.md-nav__item--nested > .md-nav__link {
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+}
+
+/* Custom admonition styles */
+.md-typeset .admonition.info {
+  border-color: var(--md-primary-fg-color);
+}
+
+.md-typeset .admonition.info > .admonition-title {
+  background-color: var(--md-primary-fg-color--light);
+}
+
+/* Style for API endpoint boxes */
+.api-endpoint {
+  background-color: var(--md-code-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.api-endpoint .method {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}
+
+.api-endpoint .method.get {
+  background-color: #22c55e;
+  color: white;
+}
+
+.api-endpoint .method.post {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.api-endpoint .method.put {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.api-endpoint .method.delete {
+  background-color: #ef4444;
+  color: white;
+}
+
+.api-endpoint .endpoint {
+  font-family: var(--md-code-font);
+  font-size: 1rem;
+}
+
+/* Improve source code section styling */
+.source-code-section {
+  margin-top: 2rem;
+}
+
+.source-code-section h2 {
+  border-bottom: 2px solid var(--md-primary-fg-color);
+  padding-bottom: 0.5rem;
+}
+
+/* Better spacing for long navigation lists */
+.md-nav--secondary .md-nav__list {
+  padding: 0;
+}
+
+.md-nav--secondary .md-nav__item {
+  padding: 0.125rem 0;
+}
+
+/* Highlight important sections */
+.highlight-section {
+  background-color: var(--md-primary-fg-color--light);
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.highlight-section h3 {
+  margin-top: 0;
+  color: white;
+}
+
+/* Responsive improvements */
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title[for="__drawer"] {
+    background-color: var(--md-primary-fg-color);
+  }
+}
+
+/* Custom grid for feature overview */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: var(--md-default-bg-color);
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  color: var(--md-primary-fg-color);
+}
+
+/* Improve code copy button visibility */
+.md-code__content .md-clipboard {
+  opacity: 0.7;
+}
+
+.md-code__content:hover .md-clipboard {
+  opacity: 1;
+}

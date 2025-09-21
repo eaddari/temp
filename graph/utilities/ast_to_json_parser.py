@@ -1,6 +1,7 @@
 import ast
 import json
 import pandas as pd
+import yaml
 
 class CodeEntityExtractor(ast.NodeVisitor):
     def __init__(self, file_name=None, code_lines=None):
@@ -128,54 +129,95 @@ def parse_parquet_to_json(parquet_path, output_path, cross_calls=False):
     function_index = {} if cross_calls else None
     method_index = {} if cross_calls else None
 
-    # Collect all .py file names as project modules
     project_modules = set(df[0].apply(lambda x: str(x).replace('.py', '').replace('/', '.').split('.')[-1]) if 0 in df.columns else [])
     for _, row in df.iterrows():
         file_path = row[0] if 0 in row else row.get('name', None)
         code_content = row[1] if 1 in row else row.get('content', None)
-        if file_path is None or code_content is None or not str(file_path).endswith('.py'):
+        if file_path is None or code_content is None:
             continue
-        try:
-            tree = ast.parse(code_content)
-            extractor = CodeEntityExtractor(file_name=str(file_path), code_lines=code_content.splitlines())
-            extractor.visit(tree)
-            imports = extractor.get_imports(tree, project_modules=project_modules)
-            result = {
-                'file': str(file_path),
-                'imports': imports,
-                'classes': extractor.classes,
-                'functions': extractor.functions,
-                'calls': extractor.calls
-            }
-            if cross_calls:
-                for func in extractor.functions:
-                    function_index.setdefault(func['name'], []).append(str(file_path))
-                for cls in extractor.classes:
-                    for method in cls['methods']:
-                        method_index.setdefault((cls['name'], method['name']), []).append(str(file_path))
-                result['methods'] = [m for cls in extractor.classes for m in cls['methods']]
-            all_results.append(result)
-        except Exception as e:
-            print(f"Error parsing {file_path}: {e}")
+
+        # Skip README files
+        if str(file_path).lower().startswith('readme'):
+            continue
+
+        # Handle Python files
+        if str(file_path).endswith('.py'):
+            try:
+                tree = ast.parse(code_content)
+                extractor = CodeEntityExtractor(file_name=str(file_path), code_lines=code_content.splitlines())
+                extractor.visit(tree)
+                imports = extractor.get_imports(tree, project_modules=project_modules)
+                result = {
+                    'file': str(file_path),
+                    'type': 'python',
+                    'imports': imports,
+                    'classes': extractor.classes,
+                    'functions': extractor.functions,
+                    'calls': extractor.calls
+                }
+                if cross_calls:
+                    for func in extractor.functions:
+                        function_index.setdefault(func['name'], []).append(str(file_path))
+                    for cls in extractor.classes:
+                        for method in cls['methods']:
+                            method_index.setdefault((cls['name'], method['name']), []).append(str(file_path))
+                    result['methods'] = [m for cls in extractor.classes for m in cls['methods']]
+                all_results.append(result)
+            except Exception as e:
+                print(f"Error parsing {file_path}: {e}")
+
+        # Handle Markdown files
+        elif str(file_path).endswith('.md'):
+            try:
+                result = {
+                    'file': str(file_path),
+                    'type': 'markdown',
+                    'content': code_content
+                }
+                all_results.append(result)
+            except Exception as e:
+                print(f"Error processing Markdown file {file_path}: {e}")
+
+        # Handle Text files
+        elif str(file_path).endswith('.txt'):
+            try:
+                result = {
+                    'file': str(file_path),
+                    'type': 'text',
+                    'content': code_content
+                }
+                all_results.append(result)
+            except Exception as e:
+                print(f"Error processing Text file {file_path}: {e}")
+
+        # Handle YAML files
+        elif str(file_path).endswith(('.yaml', '.yml')):
+            try:
+                yaml_content = yaml.safe_load(code_content)
+                result = {
+                    'file': str(file_path),
+                    'type': 'yaml',
+                    'content': yaml_content
+                }
+                all_results.append(result)
+            except Exception as e:
+                print(f"Error processing YAML file {file_path}: {e}")
 
     if cross_calls:
         for result in all_results:
-            for call in result['calls']:
-                called_func = call['called_function']
-                caller_class = call['caller_class']
-                caller_file = result['file']
-                called_files = function_index.get(called_func, [])
-                called_method_files = []
-                if caller_class:
-                    called_method_files = method_index.get((caller_class, called_func), [])
-                call['called_function_files'] = called_files
-                call['called_method_files'] = called_method_files
-                call['self_call_function'] = caller_file in called_files
-                call['self_call_method'] = caller_file in called_method_files
+            if result['type'] == 'python':
+                for call in result['calls']:
+                    called_func = call['called_function']
+                    caller_class = call['caller_class']
+                    caller_file = result['file']
+                    called_files = function_index.get(called_func, [])
+                    called_method_files = []
+                    if caller_class:
+                        called_method_files = method_index.get((caller_class, called_func), [])
+                    call['called_function_files'] = called_files
+                    call['called_method_files'] = called_method_files
+                    call['self_call_function'] = caller_file in called_files
+                    call['self_call_method'] = caller_file in called_method_files
 
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(all_results, f, indent=2)
-
-if __name__ == "__main__":
-
-    parse_parquet_to_json('C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\docgen-unofficial-docgen-test_part_0_processed.parquet', 'repo_output.json')

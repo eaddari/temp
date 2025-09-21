@@ -20,13 +20,13 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+"""
+Main entry point for running the DocGen API server.
+
+Configures and starts the uvicorn server on host 0.0.0.0:8082
+with info level logging.
+"""
 if __name__ == '__main__':
-    """
-    Main entry point for running the DocGen API server.
-    
-    Configures and starts the uvicorn server on host 0.0.0.0:8082
-    with info level logging.
-    """
     server_configuration = uvicorn.Config(
         app,
         host="0.0.0.0",

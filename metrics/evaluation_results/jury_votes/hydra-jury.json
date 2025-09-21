@@ -1,0 +1,54 @@
+{
+  "evaluation_timestamp": "2025-09-21T16:17:11.115937",
+  "document_A": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\generated\\hydra.md",
+  "document_B": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\reference\\hydra-official.md",
+  "individual_results": [
+    {
+      "better_document": "A",
+      "confidence": 0.9,
+      "reasoning": "Document A provides a comprehensive and detailed overview of the repository's features, structure, and practical examples, making it highly useful for readers. It covers content quality, completeness, clarity, and technical accuracy effectively. Document B, while visually appealing, lacks the depth and detailed information provided in Document A, focusing more on general project badges and external links.",
+      "scores": {
+        "document_A": 9.5,
+        "document_B": 6.0
+      },
+      "model": "deepseek",
+      "model_full_name": "DeepSeek-V3-0324"
+    },
+    {
+      "better_document": "A",
+      "confidence": 0.85,
+      "reasoning": "Document A provides more detailed and structured information regarding the repository's functionality, organization, and usage, making it more useful to readers seeking technical detail. It offers insights into practical examples, configuration management, and the overall framework. In contrast, Document B focuses more on visual branding, release notes, and brief references to third-party libraries without detailed technical content.",
+      "scores": {
+        "document_A": 8.7,
+        "document_B": 5.5
+      },
+      "model": "phi4",
+      "model_full_name": "phi-4"
+    },
+    {
+      "better_document": "A",
+      "confidence": 0.85,
+      "reasoning": "Document A provides more detailed content, better organization, and practical examples with code snippets, making it more useful and comprehensive for readers. Document B, while visually appealing with badges and links, lacks depth in content and focuses more on promotional elements rather than technical details or actionable information.",
+      "scores": {
+        "document_A": 8.7,
+        "document_B": 5.5
+      },
+      "model": "grok3",
+      "model_full_name": "grok-3"
+    }
+  ],
+  "summary": {
+    "winner_by_average_score": "A",
+    "winner_by_votes": "A",
+    "votes": {
+      "A": 3,
+      "B": 0
+    },
+    "average_scores": {
+      "document_A": 8.97,
+      "document_B": 5.67
+    },
+    "average_confidence": 0.87,
+    "score_difference": 3.3
+  }
+}

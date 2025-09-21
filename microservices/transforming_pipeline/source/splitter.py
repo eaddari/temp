@@ -1,4 +1,3 @@
-
 import asyncio
 import inspect
 import pandas as pd
@@ -16,6 +15,16 @@ with open(json_path, "r", encoding="utf-8") as f:
     EXTENSIONS = json.load(f)
 
 class ManageTransforming():
+    """
+    Manages the document transformation pipeline.
+
+    Methods
+    -------
+    __init__(input_path, keep_comments):
+        Initialize with input path and comment retention flag.
+    run_steps(steps):
+        Execute the specified transformation steps.
+    """
     def __init__(self, input_path: str, keep_comments: bool, ):
         self.input_path = input_path
         self.keep_comments = keep_comments
@@ -25,7 +34,8 @@ class ManageTransforming():
             "anonymization": self._anonymization,
             "file_converter": self._file_converter,
             "python_to_text": self._python_to_text,
-            "text_cleaner": self._text_cleaner
+            "text_cleaner": self._text_cleaner,
+            "include_yamls": self._include_yamls
         }
 
     def __filter_extension(self, extensions) -> pd.DataFrame:
@@ -82,6 +92,13 @@ class ManageTransforming():
             return self.df
         return self.df
     
+    async def _include_yamls(self) -> pd.DataFrame:
+        """Include YAML files in the DataFrame without processing."""
+        yaml_mask = self.df['name'].apply(lambda x: str(x).endswith(('.yaml', '.yml')))
+        yaml_df = self.df[yaml_mask]
+        print(f"Including {len(yaml_df)} YAML files in the DataFrame.")
+        return self.df
+
     async def run_step(self, step_name: str) -> pd.DataFrame:
         """Run a specific pipeline step by name."""
         handler = self.step_handlers.get(step_name)

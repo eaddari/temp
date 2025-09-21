@@ -1,0 +1,54 @@
+{
+  "evaluation_timestamp": "2025-09-21T17:04:33.666913",
+  "document_A": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\generated\\pydantic.md",
+  "document_B": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\reference\\pydantic-official.md",
+  "individual_results": [
+    {
+      "better_document": "A",
+      "confidence": 0.9,
+      "reasoning": "Document A provides a more comprehensive and detailed overview of Pydantic, including its key features, repository structure, and example usage. It is well-organized and covers technical aspects more thoroughly. Document B, while informative, focuses more on badges, installation, and a simpler example, lacking the depth and completeness of Document A.",
+      "scores": {
+        "document_A": 9.0,
+        "document_B": 7.0
+      },
+      "model": "deepseek",
+      "model_full_name": "DeepSeek-V3-0324"
+    },
+    {
+      "better_document": "A",
+      "confidence": 0.85,
+      "reasoning": "Document A provides a more comprehensive overview of Pydantic, covering technical aspects, features, usage examples, and repository structure. It contains more detailed and organized content compared to Document B, which is more generic and truncated, lacking depth in the provided content.",
+      "scores": {
+        "document_A": 9.0,
+        "document_B": 6.5
+      },
+      "model": "phi4",
+      "model_full_name": "phi-4"
+    },
+    {
+      "better_document": "A",
+      "confidence": 0.85,
+      "reasoning": "Document A provides a more detailed and organized overview of Pydantic, including key features, repository structure, and examples with explanations. It also covers advanced features, which adds to its completeness and usefulness. Document B, while including installation instructions and badges for CI and coverage, lacks depth in content and organization.",
+      "scores": {
+        "document_A": 8.7,
+        "document_B": 6.5
+      },
+      "model": "grok3",
+      "model_full_name": "grok-3"
+    }
+  ],
+  "summary": {
+    "winner_by_average_score": "A",
+    "winner_by_votes": "A",
+    "votes": {
+      "A": 3,
+      "B": 0
+    },
+    "average_scores": {
+      "document_A": 8.9,
+      "document_B": 6.67
+    },
+    "average_confidence": 0.87,
+    "score_difference": 2.23
+  }
+}

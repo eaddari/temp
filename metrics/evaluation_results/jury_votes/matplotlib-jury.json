@@ -1,0 +1,54 @@
+{
+  "evaluation_timestamp": "2025-09-21T16:47:36.831268",
+  "document_A": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\generated\\matplotlib.md",
+  "document_B": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\reference\\matplotlib-official.md",
+  "individual_results": [
+    {
+      "better_document": "A",
+      "confidence": 0.9,
+      "reasoning": "Document A provides a more detailed and structured overview of the project, including comprehensive documentation, community standards, and testing practices. It is better organized and more useful for readers seeking in-depth information. Document B, while informative, focuses more on badges and general information without the same level of detail or clarity.",
+      "scores": {
+        "document_A": 9.0,
+        "document_B": 7.0
+      },
+      "model": "deepseek",
+      "model_full_name": "DeepSeek-V3-0324"
+    },
+    {
+      "better_document": "A",
+      "confidence": 0.75,
+      "reasoning": "Document A provides more detailed technical guidance and structured information about the project, covering setup, standards, and specific practices like GitHub Codespaces and schema validations. It presents a clearer organization and more specific examples, improving its clarity and usefulness.",
+      "scores": {
+        "document_A": 8.4,
+        "document_B": 6.5
+      },
+      "model": "phi4",
+      "model_full_name": "phi-4"
+    },
+    {
+      "better_document": "A",
+      "confidence": 0.85,
+      "reasoning": "Document A provides more detailed content with clear organization, comprehensive coverage of key features, and practical examples for users and contributors. Document B, while visually appealing with badges and links, lacks depth in content and is more focused on surface-level information and external references.",
+      "scores": {
+        "document_A": 8.7,
+        "document_B": 5.5
+      },
+      "model": "grok3",
+      "model_full_name": "grok-3"
+    }
+  ],
+  "summary": {
+    "winner_by_average_score": "A",
+    "winner_by_votes": "A",
+    "votes": {
+      "A": 3,
+      "B": 0
+    },
+    "average_scores": {
+      "document_A": 8.7,
+      "document_B": 6.33
+    },
+    "average_confidence": 0.83,
+    "score_difference": 2.37
+  }
+}

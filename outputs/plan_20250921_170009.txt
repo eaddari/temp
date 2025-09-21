@@ -1,0 +1,85 @@
+{
+    "title": "Project Title (descriptive name for the software)",
+    "description": "Brief one-sentence summary of the software's purpose and functionality",
+    "estimated_length": "Medium",
+    "sections": [
+        {
+            "section_name": "General Information",
+            "content_type": "overview",
+            "priority": "High",
+            "description": "Project name, version using semantic versioning, and short description of software's purpose and functionality"
+        },
+        {
+            "section_name": "Project Overview",
+            "content_type": "overview",
+            "priority": "High",
+            "description": "Full description of software's purpose and notable features, date of creation, project organization details, and software project size"
+        },
+        {
+            "section_name": "Table of Contents",
+            "content_type": "navigation",
+            "priority": "High",
+            "description": "A navigable list of all major sections and subsections in the README for quick reference"
+        },
+        {
+            "section_name": "Installation",
+            "content_type": "tutorial",
+            "priority": "High",
+            "description": "Step-by-step installation instructions, system requirements, required libraries and dependencies, setup requirements, and known installation issues"
+        },
+        {
+            "section_name": "Usage",
+            "content_type": "examples",
+            "priority": "High",
+            "description": "Instructions for running the software with expected output, usage examples, screenshots where appropriate, testing instructions, and known limitations"
+        },
+        {
+            "section_name": "Project Structure",
+            "content_type": "reference",
+            "priority": "High",
+            "description": "Overview of the folder and file organization, with explanations of the purpose of key files and directories"
+        },
+        {
+            "section_name": "Key Components",
+            "content_type": "reference",
+            "priority": "High",
+            "description": "Descriptions of main classes, functions, and entry points, including their roles and relationships"
+        },
+        {
+            "section_name": "Architecture Overview",
+            "content_type": "overview",
+            "priority": "Medium",
+            "description": "High-level description of the main components, their relationships, and how data flows through the system"
+        },
+        {
+            "section_name": "Dependencies",
+            "content_type": "reference",
+            "priority": "Medium",
+            "description": "List of main libraries and external dependencies required by the project, including version requirements"
+        },
+        {
+            "section_name": "Contributing",
+            "content_type": "tutorial",
+            "priority": "Medium",
+            "description": "Guidelines for contributing to the project, including how to run tests, submit issues or pull requests, and code style conventions"
+        },
+        {
+            "section_name": "License",
+            "content_type": "reference",
+            "priority": "Medium",
+            "description": "Software license information, restrictions on use, and preferred citation format for publications"
+        },
+        {
+            "section_name": "Contact Information",
+            "content_type": "reference",
+            "priority": "Low",
+            "description": "Contact details for maintainers and contributors including name, role, ORCID, institution, and email"
+        },
+        {
+            "section_name": "Acknowledgements",
+            "content_type": "reference",
+            "priority": "Low",
+            "description": "Funding sources with grant numbers, related publications, project availability locations, relationships to other projects, and complete contributor list"
+        }
+    ]
+}

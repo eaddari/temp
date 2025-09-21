@@ -1,0 +1,51 @@
+{
+  "evaluation_timestamp": "2025-09-21T12:37:10.980460",
+  "text_lengths": {
+    "generated": 16873,
+    "reference": 4786
+  },
+  "rouge": {
+    "rouge1_f1": 0.15598705501618124,
+    "rouge2_f1": 0.029145077720207253,
+    "rougeL_f1": 0.06796116504854369,
+    "rouge1_precision": 0.10020790020790021,
+    "rouge1_recall": 0.3518248175182482,
+    "rouge2_precision": 0.018718801996672214,
+    "rouge2_recall": 0.06578947368421052,
+    "rougeL_precision": 0.04365904365904366,
+    "rougeL_recall": 0.15328467153284672
+  },
+  "meteor": {
+    "meteor_score": 0.26898737068279377
+  },
+  "bertscore": {
+    "bertscore_precision": 0.7981020212173462,
+    "bertscore_recall": 0.7695659399032593,
+    "bertscore_f1": 0.7835742831230164
+  },
+  "word_overlap": {
+    "word_precision": 0.13304093567251463,
+    "word_recall": 0.5290697674418605,
+    "word_f1": 0.21261682242990657,
+    "word_overlap_count": 91
+  },
+  "entity_keyword_recall": {
+    "entity_recall": 0.0,
+    "keyword_recall": 0.37623762376237624,
+    "entities_found": 0,
+    "total_reference_entities": 0,
+    "keywords_found": 76,
+    "total_reference_keywords": 202
+  },
+  "compression": {
+    "character_compression_ratio": 3.5254910154617636,
+    "word_compression_ratio": 3.491228070175439,
+    "sentence_compression_ratio": 2.4271844660194173,
+    "generated_length": 16873,
+    "reference_length": 4786,
+    "generated_words": 2388,
+    "reference_words": 684
+  },
+  "bart_score": -3.0553441047668457,
+  "llm_evaluation": "```json\n{\n  \"result\": \"FILE 1\",\n  \"reason\": \"Comprehensive detailed documentation, usage, installation, and examples.\"\n}\n```"
+}

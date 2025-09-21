@@ -44,11 +44,12 @@ class FrontEnd():
 
     def __add_checkbox_pipeline(self):
         st.sidebar.header("⚙️ Pipeline Options")
+        anonymization = st.sidebar.checkbox("Anonymization", value=True)
         file_converter = st.sidebar.checkbox("File Converter", value=True)
         python_to_text = st.sidebar.checkbox("Python to Text", value=True)
         text_cleaner = st.sidebar.checkbox("Text Cleaner", value=True)
         self.selected_components={
-            "anonymization": True,
+            "anonymization": anonymization,
             "file_converter": file_converter,
             "python_to_text": python_to_text,
             "text_cleaner": text_cleaner

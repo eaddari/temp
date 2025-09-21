@@ -1,0 +1,54 @@
+{
+  "evaluation_timestamp": "2025-09-21T16:28:55.400352",
+  "document_A": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\generated\\fastapi.md",
+  "document_B": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\reference\\fastapi-official.md",
+  "individual_results": [
+    {
+      "better_document": "A",
+      "confidence": 0.9,
+      "reasoning": "Document A provides a comprehensive and detailed overview of the documentation system, including multilingual support, structure, and practical usage examples. It is well-organized and clearly outlines the content, making it highly useful for readers. Document B, while informative about FastAPI's features and performance, lacks the depth and structured detail found in Document A.",
+      "scores": {
+        "document_A": 9.0,
+        "document_B": 7.0
+      },
+      "model": "deepseek",
+      "model_full_name": "DeepSeek-V3-0324"
+    },
+    {
+      "better_document": "A",
+      "confidence": 0.85,
+      "reasoning": "Document A provides detailed, multilingual documentation structure with comprehensive coverage of topics, whereas Document B offers a high-level overview of FastAPI with fewer details. Document A demonstrates better organization, clarity in showcasing content structure, and coverage of various languages, making it more technically informative and useful for installation and configuration contexts.",
+      "scores": {
+        "document_A": 8.7,
+        "document_B": 6.5
+      },
+      "model": "phi4",
+      "model_full_name": "phi-4"
+    },
+    {
+      "better_document": "A",
+      "confidence": 0.85,
+      "reasoning": "Document A provides a more detailed and structured overview of a documentation system, with clear organization, comprehensive coverage of topics, and practical examples. Document B, while informative about the FastAPI framework with key features and branding, lacks the depth and structured content of Document A, focusing more on promotional material than detailed guidance.",
+      "scores": {
+        "document_A": 8.7,
+        "document_B": 6.5
+      },
+      "model": "grok3",
+      "model_full_name": "grok-3"
+    }
+  ],
+  "summary": {
+    "winner_by_average_score": "A",
+    "winner_by_votes": "A",
+    "votes": {
+      "A": 3,
+      "B": 0
+    },
+    "average_scores": {
+      "document_A": 8.8,
+      "document_B": 6.67
+    },
+    "average_confidence": 0.87,
+    "score_difference": 2.13
+  }
+}

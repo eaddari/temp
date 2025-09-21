@@ -11,3 +11,9 @@ SECRET_PATTERNS = [
     r'[A-Fa-f0-9]{40}',                                     # SHA-1 hashes
     r'\b([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})\b',         # MAC addresses
 ]
+
+"""
+Patterns for detecting secrets and sensitive information in text.
+
+Each regex pattern is designed to match a specific type of secret, such as API keys, tokens, passwords, and cryptographic keys.
+"""

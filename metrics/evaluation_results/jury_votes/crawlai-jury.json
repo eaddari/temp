@@ -1,0 +1,54 @@
+{
+  "evaluation_timestamp": "2025-09-21T15:42:39.922516",
+  "document_A": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\generated\\crawlai.md",
+  "document_B": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\reference\\crawlai-official.md",
+  "individual_results": [
+    {
+      "better_document": "A",
+      "confidence": 0.9,
+      "reasoning": "Document A provides a more structured, detailed, and comprehensive overview of the project, including key features, practical examples, and technical highlights. It is better organized and more informative for users looking to understand and utilize the framework. Document B, while visually appealing with badges and social links, lacks the depth and clarity of Document A.",
+      "scores": {
+        "document_A": 9.0,
+        "document_B": 6.5
+      },
+      "model": "deepseek",
+      "model_full_name": "DeepSeek-V3-0324"
+    },
+    {
+      "better_document": "A",
+      "confidence": 0.82,
+      "reasoning": "Document A is more focused, concise, and technically organized: it clearly lists core features, practical examples with file paths, and technical highlights that make it immediately useful for developers. Document B is more promotional and engaging with release notes and community badges, but the excerpt is fragmented, includes marketing and a personal story that reduces technical density, and provides less structured, actionable information compared with A.",
+      "scores": {
+        "document_A": 8.7,
+        "document_B": 6.1
+      },
+      "model": "gpt5mini",
+      "model_full_name": "gpt-5-mini"
+    },
+    {
+      "better_document": "A",
+      "confidence": 0.85,
+      "reasoning": "Document A provides superior content quality, completeness, and clarity with detailed technical information, structured organization, and practical examples, making it more useful to readers. Document B, while visually engaging and community-focused, lacks depth in technical details and actionable content.",
+      "scores": {
+        "document_A": 8.7,
+        "document_B": 5.5
+      },
+      "model": "grok3",
+      "model_full_name": "grok-3"
+    }
+  ],
+  "summary": {
+    "winner_by_average_score": "A",
+    "winner_by_votes": "A",
+    "votes": {
+      "A": 3,
+      "B": 0
+    },
+    "average_scores": {
+      "document_A": 8.8,
+      "document_B": 6.03
+    },
+    "average_confidence": 0.86,
+    "score_difference": 2.77
+  }
+}

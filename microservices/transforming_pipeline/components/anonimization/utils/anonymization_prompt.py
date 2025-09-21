@@ -23,3 +23,9 @@ SYSTEM_PROMPT_LOCALIZATION = """
 
     Do not merge all coordinates into a single list. Do not output anything else besides the indexes like in the example output.
     """
+
+"""
+Prompt for localizing sensitive information in text for anonymization.
+
+This prompt instructs the model to return the coordinates of sensitive data in each text row.
+"""

@@ -1,0 +1,54 @@
+{
+  "evaluation_timestamp": "2025-09-21T17:25:42.418813",
+  "document_A": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\generated\\typer.md",
+  "document_B": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\reference\\typer-official.md",
+  "individual_results": [
+    {
+      "better_document": "A",
+      "confidence": 0.9,
+      "reasoning": "Document A provides a more comprehensive and detailed overview of the project, including clear organization, extensive documentation, practical examples, and technical details. Document B, while visually appealing and concise, lacks the depth and completeness of Document A.",
+      "scores": {
+        "document_A": 9.0,
+        "document_B": 7.0
+      },
+      "model": "deepseek",
+      "model_full_name": "DeepSeek-V3-0324"
+    },
+    {
+      "better_document": "A",
+      "confidence": 0.85,
+      "reasoning": "Document A provides a more comprehensive and detailed explanation of the project structure, including directory contents, features, and practical examples, improving clarity and organization. It details the tools and files, offering greater usefulness for developers who need to understand the repository thoroughly. Document B, while highlighting key features and providing basic installation information, is less detailed and does not offer the same depth of guidance.",
+      "scores": {
+        "document_A": 8.7,
+        "document_B": 6.8
+      },
+      "model": "phi4",
+      "model_full_name": "phi-4"
+    },
+    {
+      "better_document": "A",
+      "confidence": 0.85,
+      "reasoning": "Document A provides more detailed and structured content with comprehensive coverage of a Python CLI toolkit, including repository organization, practical examples, and technical details. Document B, while focused on the Typer library and visually appealing with badges and links, lacks the depth and completeness of Document A, appearing more as a promotional overview with truncated content.",
+      "scores": {
+        "document_A": 8.7,
+        "document_B": 6.5
+      },
+      "model": "grok3",
+      "model_full_name": "grok-3"
+    }
+  ],
+  "summary": {
+    "winner_by_average_score": "A",
+    "winner_by_votes": "A",
+    "votes": {
+      "A": 3,
+      "B": 0
+    },
+    "average_scores": {
+      "document_A": 8.8,
+      "document_B": 6.77
+    },
+    "average_confidence": 0.87,
+    "score_difference": 2.03
+  }
+}

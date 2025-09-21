@@ -1,0 +1,85 @@
+{
+    "title": "Project Title (descriptive name for the software)",
+    "description": "A concise summary describing the software's main purpose and core functionality.",
+    "estimated_length": "Medium",
+    "sections": [
+        {
+            "section_name": "General Information",
+            "content_type": "overview",
+            "priority": "High",
+            "description": "Include the project name, current version (using semantic versioning), and a brief description of the software's purpose and main functionality. This section should provide a quick orientation for new users and contributors."
+        },
+        {
+            "section_name": "Project Overview",
+            "content_type": "overview",
+            "priority": "High",
+            "description": "Provide a detailed description of what the software does, its main features, and its intended use cases. Include the date of creation, a summary of the project's organization (e.g., modularity, main components), and an indication of the project's size and scope."
+        },
+        {
+            "section_name": "Table of Contents",
+            "content_type": "navigation",
+            "priority": "High",
+            "description": "A navigable list of all major sections in the README, allowing users to quickly find relevant information."
+        },
+        {
+            "section_name": "Installation",
+            "content_type": "tutorial",
+            "priority": "High",
+            "description": "Step-by-step instructions for installing the software, including system requirements, required libraries and dependencies, environment setup, and any known installation issues or troubleshooting tips."
+        },
+        {
+            "section_name": "Usage",
+            "content_type": "examples",
+            "priority": "High",
+            "description": "Instructions for running the software, including basic usage examples (such as CLI commands or API calls), expected outputs, screenshots or code snippets where appropriate, testing instructions, and any known limitations or caveats."
+        },
+        {
+            "section_name": "Project Structure",
+            "content_type": "reference",
+            "priority": "High",
+            "description": "Overview of the project's folder and file organization, including a folder/file tree. Highlight key files, classes, and functions, and briefly describe their roles and relationships."
+        },
+        {
+            "section_name": "Key Components Overview",
+            "content_type": "reference",
+            "priority": "Medium",
+            "description": "Summarize the main classes, functions, and modules, including their purposes and how they interact. Mention any important design patterns or architectural decisions."
+        },
+        {
+            "section_name": "Dependencies",
+            "content_type": "reference",
+            "priority": "Medium",
+            "description": "List all external libraries and dependencies required by the project, including their versions and links to their documentation. Mention any optional dependencies and how to install them."
+        },
+        {
+            "section_name": "Contributing",
+            "content_type": "guide",
+            "priority": "Medium",
+            "description": "Guidelines for contributing to the project, including code style, how to submit issues and pull requests, and any requirements for tests or documentation. Reference a CONTRIBUTING.md file if available."
+        },
+        {
+            "section_name": "License",
+            "content_type": "reference",
+            "priority": "Medium",
+            "description": "Information about the software license, any restrictions on use, and the preferred citation format for academic or professional publications."
+        },
+        {
+            "section_name": "Contact Information",
+            "content_type": "reference",
+            "priority": "Low",
+            "description": "Contact details for maintainers and major contributors, including name, role, ORCID (if applicable), institution, and email address."
+        },
+        {
+            "section_name": "Acknowledgements",
+            "content_type": "reference",
+            "priority": "Low",
+            "description": "List of funding sources (with grant numbers if relevant), related publications, locations where the project is available (e.g., repositories, package indexes), relationships to other projects, and a complete list of contributors."
+        },
+        {
+            "section_name": "References & Further Reading",
+            "content_type": "reference",
+            "priority": "Low",
+            "description": "Links to detailed documentation, API references, tutorials, and other resources for users who want to learn more or need advanced guidance."
+        }
+    ]
+}

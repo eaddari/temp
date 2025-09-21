@@ -1,0 +1,79 @@
+{
+    "title": "Project Title (descriptive name for the software)",
+    "description": "A concise summary describing the software's main purpose and core functionality.",
+    "estimated_length": "Medium",
+    "sections": [
+        {
+            "section_name": "General Information",
+            "content_type": "overview",
+            "priority": "High",
+            "description": "Project name, current version (using semantic versioning), and a brief summary of the software's purpose and primary functionality."
+        },
+        {
+            "section_name": "Project Overview",
+            "content_type": "overview",
+            "priority": "High",
+            "description": "A comprehensive description of the software's goals, main features, intended use cases, date of initial creation, project organization details (e.g., team, maintainers), and an indication of the project's size or scope."
+        },
+        {
+            "section_name": "Installation",
+            "content_type": "tutorial",
+            "priority": "High",
+            "description": "Detailed, step-by-step instructions for installing and setting up the project. This should include system requirements, a list of required libraries and dependencies, environment setup, configuration steps, and notes on any known installation issues or troubleshooting tips."
+        },
+        {
+            "section_name": "Usage",
+            "content_type": "examples",
+            "priority": "High",
+            "description": "Clear instructions for running or using the software, including command-line or API usage, example workflows, sample input/output, screenshots or diagrams if helpful, testing instructions, and any known limitations or caveats."
+        },
+        {
+            "section_name": "Project Structure",
+            "content_type": "reference",
+            "priority": "High",
+            "description": "An overview of the project's folder and file organization, with explanations of the purpose of key directories and files. This should help new contributors and users navigate the codebase."
+        },
+        {
+            "section_name": "Main Components",
+            "content_type": "reference",
+            "priority": "High",
+            "description": "Descriptions of the primary classes, functions, and modules that make up the core of the project. Include brief explanations of their roles and how they interact."
+        },
+        {
+            "section_name": "Dependencies",
+            "content_type": "reference",
+            "priority": "High",
+            "description": "A list of external libraries, frameworks, and other dependencies required by the project, including version requirements and installation instructions if not covered above."
+        },
+        {
+            "section_name": "Contributing",
+            "content_type": "tutorial",
+            "priority": "High",
+            "description": "Guidelines for contributing to the project, including code style conventions, branching and pull request workflow, issue reporting, and any required contributor agreements or checklists."
+        },
+        {
+            "section_name": "License",
+            "content_type": "reference",
+            "priority": "Medium",
+            "description": "Details of the software license, any restrictions on use or distribution, and the preferred citation format for academic or professional publications."
+        },
+        {
+            "section_name": "Credits",
+            "content_type": "reference",
+            "priority": "Medium",
+            "description": "Acknowledgments for contributors, third-party libraries, and other resources. Include funding sources, related publications, and links to related or parent projects if applicable."
+        },
+        {
+            "section_name": "Further Documentation",
+            "content_type": "reference",
+            "priority": "Medium",
+            "description": "Links to additional documentation, wikis, API references, or external resources for users and developers seeking more in-depth information."
+        },
+        {
+            "section_name": "Contact Information",
+            "content_type": "reference",
+            "priority": "Low",
+            "description": "Contact details for maintainers and key contributors, including names, roles, affiliations, and email addresses."
+        }
+    ]
+}

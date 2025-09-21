@@ -1,0 +1,54 @@
+{
+  "evaluation_timestamp": "2025-09-21T16:53:15.764949",
+  "document_A": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\generated\\plotext.md",
+  "document_B": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\reference\\plotext-official.md",
+  "individual_results": [
+    {
+      "better_document": "A",
+      "confidence": 0.9,
+      "reasoning": "Document A provides a comprehensive overview of the project, including detailed descriptions of its features, directory structure, and practical examples. It is well-organized and clearly written, making it highly useful for readers. Document B, while informative, is more fragmented and lacks the depth and clarity of Document A.",
+      "scores": {
+        "document_A": 9.0,
+        "document_B": 7.0
+      },
+      "model": "deepseek",
+      "model_full_name": "DeepSeek-V3-0324"
+    },
+    {
+      "better_document": "A",
+      "confidence": 0.85,
+      "reasoning": "Document A has better structure and organization, providing a clear and comprehensive overview of the project, its key features, and practical examples. It offers a detailed directory structure and technical details which enhance understanding. Document B, while rich in feature mentioning, lacks completeness due to truncation and lacks concise organization, making it less accessible.",
+      "scores": {
+        "document_A": 8.7,
+        "document_B": 6.5
+      },
+      "model": "phi4",
+      "model_full_name": "phi-4"
+    },
+    {
+      "better_document": "B",
+      "confidence": 0.75,
+      "reasoning": "Document B provides a broader range of features and use cases for the plotting library, including advanced visualizations like histograms, error bars, and multimedia plotting, which are not mentioned in Document A. It also includes links to detailed documentation and showcases community engagement with badges and issue tracking. However, Document A is more organized and provides a clearer directory structure and practical examples for basic usage.",
+      "scores": {
+        "document_A": 7.5,
+        "document_B": 8.2
+      },
+      "model": "grok3",
+      "model_full_name": "grok-3"
+    }
+  ],
+  "summary": {
+    "winner_by_average_score": "A",
+    "winner_by_votes": "A",
+    "votes": {
+      "A": 2,
+      "B": 1
+    },
+    "average_scores": {
+      "document_A": 8.4,
+      "document_B": 7.23
+    },
+    "average_confidence": 0.83,
+    "score_difference": 1.17
+  }
+}

@@ -1,0 +1,91 @@
+{
+    "title": "Project Title (descriptive name for the software)",
+    "description": "Brief one-sentence summary of the software's purpose and functionality",
+    "estimated_length": "Medium",
+    "sections": [
+        {
+            "section_name": "General Information",
+            "content_type": "overview",
+            "priority": "High",
+            "description": "Project name, version using semantic versioning, and short description of software's purpose and functionality"
+        },
+        {
+            "section_name": "Project Overview",
+            "content_type": "overview",
+            "priority": "High",
+            "description": "Full description of software's purpose and notable features, date of creation, project organization details, and software project size"
+        },
+        {
+            "section_name": "Table of Contents",
+            "content_type": "reference",
+            "priority": "High",
+            "description": "A navigable list of all major sections and subsections in the README for quick access"
+        },
+        {
+            "section_name": "Installation",
+            "content_type": "tutorial",
+            "priority": "High",
+            "description": "Step-by-step installation instructions, system requirements, required libraries and dependencies, setup requirements, and known installation issues"
+        },
+        {
+            "section_name": "Usage",
+            "content_type": "examples",
+            "priority": "High",
+            "description": "Instructions for running the software with expected output, usage examples, screenshots where appropriate, testing instructions, and known limitations"
+        },
+        {
+            "section_name": "Project Structure",
+            "content_type": "reference",
+            "priority": "High",
+            "description": "Overview of the folder and file hierarchy, brief descriptions of key files and their roles, and explanation of project organization"
+        },
+        {
+            "section_name": "Key Classes and Functions",
+            "content_type": "reference",
+            "priority": "High",
+            "description": "Summary of main classes, functions, and methods, including their signatures, purposes, and relationships (such as which functions call others)"
+        },
+        {
+            "section_name": "Configuration",
+            "content_type": "reference",
+            "priority": "Medium",
+            "description": "Description of configuration files (e.g., YAML), their locations, and instructions for modifying configuration settings"
+        },
+        {
+            "section_name": "Dependencies",
+            "content_type": "reference",
+            "priority": "Medium",
+            "description": "List of required libraries and external dependencies, including version requirements and installation instructions"
+        },
+        {
+            "section_name": "Contributing",
+            "content_type": "tutorial",
+            "priority": "Medium",
+            "description": "Guidelines for contributing code or documentation, including code style, pull request process, and links to additional contributing resources"
+        },
+        {
+            "section_name": "Additional Documentation",
+            "content_type": "reference",
+            "priority": "Medium",
+            "description": "Links to further documentation such as Markdown files, API docs, architecture overviews, and other relevant resources"
+        },
+        {
+            "section_name": "License",
+            "content_type": "reference",
+            "priority": "Medium",
+            "description": "Software license information, restrictions on use, and preferred citation format for publications"
+        },
+        {
+            "section_name": "Contact Information",
+            "content_type": "reference",
+            "priority": "Low",
+            "description": "Contact details for maintainers and contributors including name, role, ORCID, institution, and email"
+        },
+        {
+            "section_name": "Acknowledgements",
+            "content_type": "reference",
+            "priority": "Low",
+            "description": "Funding sources with grant numbers, related publications, project availability locations, relationships to other projects, and complete contributor list"
+        }
+    ]
+}

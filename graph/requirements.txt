@@ -1,2 +1,7 @@
-neo4j
+neo4j>=5.0.0
 python-dotenv
+requests
+pandas
+pyarrow
+PyYAML
+langchain-text-splitters

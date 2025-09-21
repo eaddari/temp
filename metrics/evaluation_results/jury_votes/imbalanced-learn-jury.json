@@ -1,0 +1,54 @@
+{
+  "evaluation_timestamp": "2025-09-21T17:18:41.264454",
+  "document_A": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\generated\\imbalanced-learn.md",
+  "document_B": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\reference\\imbalanced-learn-official.md",
+  "individual_results": [
+    {
+      "better_document": "A",
+      "confidence": 0.9,
+      "reasoning": "Document A provides a more comprehensive and detailed overview of the project, including key features, example use cases, and project structure. It is well-organized and clearly explains the technical aspects of the library. Document B, while informative, focuses more on installation and dependencies, lacking the depth and clarity of Document A.",
+      "scores": {
+        "document_A": 9.0,
+        "document_B": 7.0
+      },
+      "model": "deepseek",
+      "model_full_name": "DeepSeek-V3-0324"
+    },
+    {
+      "better_document": "A",
+      "confidence": 0.85,
+      "reasoning": "Document A provides a more detailed explanation of the library's features, including examples of usage and a structured overview of different components. It shows greater completeness, clarity, and technical detail than Document B. Document B focuses more on installation and CI/CD processes, covering fewer aspects of the library's functionality.",
+      "scores": {
+        "document_A": 9.0,
+        "document_B": 7.2
+      },
+      "model": "phi4",
+      "model_full_name": "phi-4"
+    },
+    {
+      "better_document": "A",
+      "confidence": 0.85,
+      "reasoning": "Document A provides more detailed content with specific examples, clearer organization, and better coverage of the library's features and use cases. Document B, while useful for installation instructions and dependency information, lacks depth in explaining the library's functionality and practical application.",
+      "scores": {
+        "document_A": 8.7,
+        "document_B": 6.5
+      },
+      "model": "grok3",
+      "model_full_name": "grok-3"
+    }
+  ],
+  "summary": {
+    "winner_by_average_score": "A",
+    "winner_by_votes": "A",
+    "votes": {
+      "A": 3,
+      "B": 0
+    },
+    "average_scores": {
+      "document_A": 8.9,
+      "document_B": 6.9
+    },
+    "average_confidence": 0.87,
+    "score_difference": 2.0
+  }
+}

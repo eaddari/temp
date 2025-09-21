@@ -1,0 +1,54 @@
+{
+  "evaluation_timestamp": "2025-09-21T15:54:51.519612",
+  "document_A": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\generated\\detectron2.md",
+  "document_B": "C:\\desktopnoonedrive\\docgenofficial\\AIDocGen\\metrics\\input_docs\\reference\\detectron2-official.md",
+  "individual_results": [
+    {
+      "better_document": "A",
+      "confidence": 0.9,
+      "reasoning": "Document A provides a more comprehensive and detailed overview of the repository, including key features, example use cases, and technical highlights. It is better organized and more informative, making it more useful for readers. Document B, while visually appealing, lacks the depth and completeness of Document A.",
+      "scores": {
+        "document_A": 9.0,
+        "document_B": 7.0
+      },
+      "model": "deepseek",
+      "model_full_name": "DeepSeek-V3-0324"
+    },
+    {
+      "better_document": "B",
+      "confidence": 0.8,
+      "reasoning": "Document B is clearer, more polished, and more useful for typical readers: it provides a concise project overview, installation and getting-started links, model zoo reference, license, and citation — all essential for users to begin using the library. Document A contains richer technical detail about components, datasets, and features, but it is less well organized (duplicate headings), appears truncated, and lacks actionable links (installation/getting-started) that readers commonly need. Overall B strikes a better balance of clarity, organization, completeness for practical use, and accessibility, while A is stronger on raw technical coverage but weaker on presentation and completeness.",
+      "scores": {
+        "document_A": 7.0,
+        "document_B": 8.6
+      },
+      "model": "gpt5mini",
+      "model_full_name": "gpt-5-mini"
+    },
+    {
+      "better_document": "A",
+      "confidence": 0.85,
+      "reasoning": "Document A provides more detailed and structured content with comprehensive coverage of features, technical aspects, and use cases. It is better organized and more useful for readers seeking in-depth information. Document B, while visually appealing and concise, lacks the depth and specificity needed for technical users.",
+      "scores": {
+        "document_A": 8.7,
+        "document_B": 6.5
+      },
+      "model": "grok3",
+      "model_full_name": "grok-3"
+    }
+  ],
+  "summary": {
+    "winner_by_average_score": "A",
+    "winner_by_votes": "A",
+    "votes": {
+      "A": 2,
+      "B": 1
+    },
+    "average_scores": {
+      "document_A": 8.23,
+      "document_B": 7.37
+    },
+    "average_confidence": 0.85,
+    "score_difference": 0.87
+  }
+}
